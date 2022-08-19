@@ -1,0 +1,33 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon --inspect src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Huy",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/NguyenHuyXuan/nodejs_blog.git"
+  },
+  "keywords": [
+    "blog",
+    "nodejs"
+  ],
+  "bugs": {
+    "url": "https://github.com/NguyenHuyXuan/nodejs_blog/issues"
+  },
+  "homepage": "https://github.com/NguyenHuyXuan/nodejs_blog#readme",
+  "description": "",
+  "dependencies": {
+    "epress": "^0.0.1-security",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.19"
+  }
+}
