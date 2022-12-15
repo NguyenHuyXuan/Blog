@@ -4,7 +4,6 @@ const detailsRouter = require('./details');
 
 
 
-
 function route(app) {
 
     app.use('/blogs' , blogsRouter);

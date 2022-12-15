@@ -1,7 +1,16 @@
-class BlogsController {
+const Blog = require('../models/Blog');
 
-    index(req, res) {
-     res.render('blogs')   
+class BlogController {
+
+    index(req, res , next) {
+
+        Blog.find({})
+        .then(blogs => {
+            blogs = blogs.map(blog => blog.toObject())
+            res.render('blogs' , { blogs });
+        })
+        .catch(next);
+        
     }
 
     // [GET] /blog/:slug
@@ -11,4 +20,4 @@ class BlogsController {
 
 }
 
-module.exports = new BlogsController;
+module.exports = new BlogController;

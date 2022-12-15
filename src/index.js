@@ -2,7 +2,12 @@ const express = require('express');
 var path = require('path');
 const handlebars = require('express-handlebars');
 const morgan = require('morgan');
-const { application } = require('express');
+
+const db = require('./config/db');
+
+// Connect DB
+db.connect();
+
 const app = express();
 // default port
 const port = 3000;    
@@ -23,12 +28,12 @@ app.engine('hbs', handlebars.engine({
   extname: '.hbs'  // file extension
 }));
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resources\\views'));
+app.set('views', path.join(__dirname, 'resources','views'));
 
 // routes init
 route(app);
 
 // listen on port 3000
 app.listen(port, () => {
-  console.log(`Example app listening at  http://localhost:${port}`); 
+  console.log(`App listening at http://localhost:${port}`); 
 })
