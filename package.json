@@ -23,11 +23,21 @@
   "homepage": "https://github.com/NguyenHuyXuan/nodejs_blog#readme",
   "description": "",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
     "epress": "^0.0.1-security",
-    "express": "^4.18.1",
+    "express": "^4.18.2",
     "express-handlebars": "^6.0.6",
-    "mongodb": "^4.12.1",
-    "mongoose": "^6.8.0"
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.8.0",
+    "mongoose-slug-generator": "^1.0.4",
+    "multer": "^1.3.0",
+    "multer-gridfs-storage": "^1.3.0"
   },
   "devDependencies": {
     "morgan": "^1.10.0",

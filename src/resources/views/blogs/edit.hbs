@@ -1,0 +1,21 @@
+<div class="blog-create_container">
+    <h2>Cập nhật bài viết</h2>
+    <div class="blog-create-form_container">
+
+        <form method="POST" action="/blogs/{{blog._id}}">
+                <label for="title">Tên bài viết</label><br>
+                <input type="text" class="" name="title" value="{{blog.title}}" > <br>
+
+                <label for="image">Hình ảnh</label><br>
+                <input type="text" class="" name="image" value="{{blog.image}}" ><br>
+
+                <label for="description">Chi tiết bài viết</label><br>
+                <input type="text" class="" name="description" value="{{blog.description}}"><br>
+
+                <input type="submit" value="Lưu lại">
+        </form>
+    </div>
+</div>
+
+
+

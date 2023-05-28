@@ -1,0 +1,13 @@
+<div class="blog-detail_container">
+        <div class="blog-detail_img">
+        <img src="{{detail.title}}" alt="">
+        </div>
+        {{#each detail.image}}
+        <div class="blog-detail_title">
+            <h2>{{ detail.image }}</h2>
+        </div>
+        {{/each}}
+        <div class="blog-detail_des">
+            <h4>{{blog.description}}</h4>
+        </div>
+</div>

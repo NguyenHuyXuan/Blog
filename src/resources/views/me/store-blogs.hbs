@@ -1,0 +1,27 @@
+<div class="store-blogs_container">
+    <h3> Tin tức bạn đã đăng </h3>
+
+
+    <table class="table ">
+        <thead>
+            <tr class="col-3">
+                <td>#</td>
+                <td>Tên tin tức</td>
+                <td>thời gian tạo</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each blogs }}
+            <tr>
+                <td>{{sum @index 1}}</td>
+                <td>{{this.title}}</td>
+                <td>{{this.createdAt}}</td>
+                <td>
+                    <a href="/blogs/{{this._id}}/edit" class="btn_insert">Sửa</a> 
+                    <a href="" class="">Xóa</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

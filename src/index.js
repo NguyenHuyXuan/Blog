@@ -1,7 +1,9 @@
 const express = require('express');
-var path = require('path');
+const path = require('path');
 const handlebars = require('express-handlebars');
 const morgan = require('morgan');
+
+
 
 const db = require('./config/db');
 
@@ -14,6 +16,8 @@ const port = 3000;
 
 const route = require('./routes');
 
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.urlencoded({
@@ -25,7 +29,10 @@ app.use(morgan('combined'));
 
 // Templates engine
 app.engine('hbs', handlebars.engine({
-  extname: '.hbs'  // file extension
+  extname: '.hbs' ,// file extension
+  helpers:{
+    sum :(a, b) =>  a + b ,
+  }
 }));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources','views'));

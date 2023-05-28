@@ -1,0 +1,26 @@
+<div class="detail-create_container">
+    <h2>Đăng tải truyện</h2>
+    <div class="detail-create-form_container">
+
+        <form method="POST" action="/details/store" enctype="multipart/form-data">
+                <label for="title">Tên truyện</label><br>
+                <input type="text" id="fname" name="fname" ><br>
+
+
+                <label for="image">Hình ảnh</label><br>
+                <div class="form-group">
+              <input
+                type="file"
+                name="file"
+                id="image"
+                class="form-control-file border"
+              />
+            </div>
+
+                <label for="desc">Chi tiết bài viết</label><br>
+                <input type="text" id="fname" name="fname"><br>
+
+                <input type="submit" value="sub">
+        </form>
+    </div>
+</div>

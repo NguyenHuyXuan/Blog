@@ -16,8 +16,8 @@ class SiteController{
         res.render('login');
     }
 
-    signin(req ,res){
-        res.render('signin');
+    signup(req ,res){
+        res.render('signup');
     }
 
     contact(req ,res){

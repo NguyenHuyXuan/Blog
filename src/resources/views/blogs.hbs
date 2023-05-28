@@ -1,3 +1,13 @@
 
-<a href=""><img width="640px" height="400px" src="{{ this.image }}" alt="{{ this.title }}"></a></br>
-<a class="postname" href="">{{ this.title }}</a>
+<div class="blog_container">
+    <a href="/blogs/create"><h3>Thêm Tin tức</h3></a>
+</div>
+
+
+<div class="blog_news">
+    {{#each blogs}}
+        <a href="blogs/{{ this.slug }}">
+        <img width="640px" height="400px" src="{{ this.image }}" alt="{{ this.title }}"> </a></br>
+        <a class="postname" href="blogs/{{ this.slug }}"> {{ this.title  }}</a>         
+    {{/each}}   
+</div>
